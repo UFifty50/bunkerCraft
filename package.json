@@ -4,13 +4,13 @@
   "description": "A data pack created with Sandstone",
   "scripts": {
     "watch": "sand watch",
-    "build": "sand build && rm -rf ~/.minecraft/saves/x/datapacks/bunkerCraft/ && cp -r /home/jonathan/.minecraft/datapacks/bunkerCraft ~/.minecraft/saves/x/datapacks/",
+    "build": "sand build",
     "update": "sand update"
   },
   "keywords": [],
   "author": "UFifty50",
   "license": "Apache-2.0",
-  "dependencies": {
+    "dependencies": {
     "sandstone": "^0.13.2"
   },
   "devDependencies": {
