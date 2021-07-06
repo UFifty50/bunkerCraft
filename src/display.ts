@@ -116,16 +116,13 @@ const ash = MCFunction('ash', () => {
 })
 
 MCFunction('nuclear', () => {
-  /*execute.as('@a').at('@s').unless.block(rel(0, 1, 0), 'minecraft:cave_air').run.effect.give('@s', 'minecraft:wither', 1, 1, true);
-  _.if(_.and(_.or(_.block(rel(0, 1, 0), 'minecraft:stone_button'), _.block(rel(0, 1, 0), 'minecraft:oak_button')), _.or(_.block(rel(0, 0, 0), 'minecraft:air'), _.block(rel(0, 0, 0), 'minecraft:cave_air'))), () => {
-    execute.as('@a').at('@s').run.effect.clear('@s')
-  })
-  */
-  _.if(_.not(_.and(
-    _.block(rel(0, 0, 0), noWitherBlocks),
-    _.block(rel(0, 1, 0), noWitherBlocks),
-  )), () => {
-    execute.as('@a').at('@s').run.effect.give('@s', 'minecraft:wither', 3, 0, true);
+  execute.as('@a').at('@s').run(() => {
+    _.if(_.not(_.and(
+      _.block(rel(0, 0, 0), noWitherBlocks),
+      _.block(rel(0, 1, 0), noWitherBlocks),
+    )), () => {
+      execute.as('@a').at('@s').run.effect.give('@s', 'minecraft:wither', 3, 0, true);
+    })
   })
 }, {
   runEachTick: true,
