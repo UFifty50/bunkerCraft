@@ -6,7 +6,7 @@ export default {
   formatVersion: 6,
   namespace: 'bunkercraft',
   packUid: 'iq2FQxtr',
-  saveOptions: { path: 'D:\\Jonathan\\AppData\\Roaming\\.minecraft\\saves\\bunkercraft\\datapacks' },
+  saveOptions: { path: 'build/' },
   onConflict: {
     default: 'warn',
   },
